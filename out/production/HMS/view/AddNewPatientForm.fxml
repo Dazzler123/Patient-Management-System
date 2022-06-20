@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="622.0" prefWidth="1099.0" style="-fx-background-color: #708090;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewPatientFormController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="596.0" prefWidth="1070.0" style="-fx-background-color: #b0c4de;">
+         <children>
+            <VBox layoutX="21.0" layoutY="14.0" prefHeight="468.0" prefWidth="85.0" spacing="50.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NIC : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gender : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weight : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <JFXTextField fx:id="txtNIC" layoutX="71.0" layoutY="12.0" prefHeight="31.0" prefWidth="179.0" />
+            <JFXTextField fx:id="txtName" layoutX="93.0" layoutY="85.0" prefHeight="31.0" prefWidth="423.0" />
+            <JFXTextField fx:id="txtMobile" layoutX="100.0" layoutY="159.0" prefHeight="31.0" prefWidth="149.0" />
+            <JFXTextField fx:id="txtAge" layoutX="74.0" layoutY="307.0" prefHeight="31.0" prefWidth="58.0" />
+            <JFXTextField fx:id="txtWeight" layoutX="103.0" layoutY="455.0" prefHeight="31.0" prefWidth="77.0" promptText="Kg." />
+            <JFXTextArea fx:id="txtAddress" layoutX="115.0" layoutY="227.0" prefHeight="44.0" prefWidth="326.0" />
+            <Text layoutX="625.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History : ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="625.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Other Issues : ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="txtHistory" layoutX="625.0" layoutY="46.0" prefHeight="200.0" prefWidth="423.0" promptText="Past sicknesses, Accidents, etc.." />
+            <TextArea fx:id="txtOtherIssues" layoutX="625.0" layoutY="295.0" prefHeight="200.0" prefWidth="423.0" promptText="Alergies,Infections,etc..." />
+            <JFXButton buttonType="RAISED" layoutX="878.0" layoutY="530.0" onAction="#btnSavePatient" prefHeight="48.0" prefWidth="160.0" style="-fx-background-color: orange;" text="Save ">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="701.0" layoutY="530.0" onAction="#btnExit" prefHeight="48.0" prefWidth="160.0" style="-fx-background-color: orange;" text="Close">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="cbxGender" layoutX="102.0" layoutY="381.0" prefHeight="31.0" prefWidth="107.0" />
+            <ImageView fitHeight="69.0" fitWidth="100.0" layoutX="3.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/download-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

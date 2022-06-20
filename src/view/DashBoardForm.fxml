@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="616.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="616.0" prefWidth="364.0" style="-fx-background-color: #708090;">
+         <children>
+            <VBox layoutX="12.0" layoutY="48.0" prefHeight="224.0" prefWidth="269.0" spacing="20.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#btnToOPD" prefHeight="58.0" prefWidth="368.0" style="-fx-background-color: #708090;" text="OPD">
+                     <font>
+                        <Font name="Arial Black" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#btnToPharmacy" prefHeight="58.0" prefWidth="369.0" style="-fx-background-color: #708090;" text="Pharmacy">
+                     <font>
+                        <Font name="Arial Black" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#btnToDoctorAttendance" prefHeight="58.0" prefWidth="369.0" style="-fx-background-color: #708090;" text="Doctor Attendance">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="50.0" fitWidth="93.0" layoutX="4.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/download-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="78.0" layoutY="548.0" text="Niwansuwa Medical Center">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="94.0" layoutX="290.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/268-2681395_opd-ipd-health-check-up-icon-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="94.0" layoutX="294.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/png-transparent-pharmacy-pharmaceutical-drug-pharmacist-medicine-computer-icons-others-miscellaneous-white-text-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="16.0" layoutY="332.0" prefHeight="66.0" prefWidth="269.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#btnToAdminLogin" prefHeight="58.0" prefWidth="369.0" style="-fx-background-color: #708090;" text="Administrator Login">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <ImageView fitHeight="58.0" fitWidth="62.0" layoutX="291.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="43.0" layoutX="297.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/273-2736587_approval-process-icon-comments-attendance-icon-png-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="362.0" prefHeight="616.0" prefWidth="748.0">
+         <children>
+            <ImageView fitHeight="616.0" fitWidth="748.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/Picture1-1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="143.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/download-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="687.0" layoutY="566.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/png-clipart-computer-icons-exit-icon-miscellaneous-angle-thumbnail-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="608.0" layoutY="556.0" onAction="#btnExit" prefHeight="54.0" prefWidth="82.0" text="Exit">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <HBox alignment="CENTER" layoutX="326.0" layoutY="12.0" prefHeight="36.0" prefWidth="397.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="74.0" text="Date  : ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" prefHeight="31.0" prefWidth="121.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="74.0" text="Time  : ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" prefHeight="30.0" prefWidth="88.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAM_PM" prefHeight="32.0" prefWidth="36.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

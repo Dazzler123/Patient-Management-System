@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="488.0" prefWidth="874.0" style="-fx-background-color: #add8e6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoctorAttendanceFormController">
+   <children>
+      <HBox alignment="CENTER" layoutX="456.0" layoutY="14.0" prefHeight="36.0" prefWidth="397.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="74.0" text="Date  : ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" prefHeight="31.0" prefWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="74.0" text="Time  : ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" prefHeight="30.0" prefWidth="88.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAM_PM" prefHeight="32.0" prefWidth="36.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXComboBox fx:id="cbxDoctorID" layoutX="52.0" layoutY="85.0" prefHeight="36.0" prefWidth="225.0" promptText="Select Doctor ID" />
+      <Label layoutX="332.0" layoutY="93.0" text="Doctor Name  : " />
+      <Label fx:id="lblDoctorName" layoutX="444.0" layoutY="90.0" prefHeight="27.0" prefWidth="421.0" textFill="#3b2d79">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="52.0" layoutY="184.0" prefHeight="125.0" prefWidth="225.0" spacing="30.0">
+         <children>
+            <JFXButton fx:id="btnArrival" buttonType="RAISED" onAction="#btnRecordArrival" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #20b2aa;" text="Record Arrival">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDeparture" buttonType="RAISED" onAction="#btnRecordDeparture" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #20b2aa;" text="Record Departure">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ImageView fitHeight="69.0" fitWidth="100.0" layoutX="13.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/download-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="511.0" layoutY="421.0" prefHeight="54.0" prefWidth="348.0" spacing="20.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#btnExit" prefHeight="48.0" prefWidth="160.0" style="-fx-background-color: orange;" text="Close">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnConfirm" prefHeight="48.0" prefWidth="160.0" style="-fx-background-color: orange;" text="Confirm">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
