@@ -1,6 +1,6 @@
 package controller;
 
-import bo.AttendanceBO;
+import bo.custom.AttendanceBO;
 import bo.custom.impl.AttendanceBOImpl;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;

@@ -1,6 +1,6 @@
 package dao.custom.impl;
 
-import dao.PatientDAO;
+import dao.custom.PatientDAO;
 import entity.Patient;
 import util.CrudUtil;
 

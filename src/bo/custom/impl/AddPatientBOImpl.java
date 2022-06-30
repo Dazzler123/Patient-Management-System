@@ -1,7 +1,7 @@
 package bo.custom.impl;
 
-import bo.AddPatientBO;
-import dao.PatientDAO;
+import bo.custom.AddPatientBO;
+import dao.custom.PatientDAO;
 import dao.custom.impl.PatientDAOImpl;
 import dto.PatientDTO;
 import entity.Patient;

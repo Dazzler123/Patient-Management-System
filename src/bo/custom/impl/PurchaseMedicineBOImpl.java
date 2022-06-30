@@ -1,6 +1,6 @@
 package bo.custom.impl;
 
-import bo.PurchaseMedicineBO;
+import bo.custom.PurchaseMedicineBO;
 import dto.MedicineDTO;
 import dto.Medicine_Cart;
 import javafx.collections.FXCollections;

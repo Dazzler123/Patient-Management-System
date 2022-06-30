@@ -1,6 +1,6 @@
 package bo.custom.impl;
 
-import bo.AttendanceBO;
+import bo.custom.AttendanceBO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import util.CrudUtil;

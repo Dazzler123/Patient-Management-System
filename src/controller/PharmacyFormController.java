@@ -1,6 +1,6 @@
 package controller;
 
-import bo.PurchaseMedicineBO;
+import bo.custom.PurchaseMedicineBO;
 import bo.custom.impl.PurchaseMedicineBOImpl;
 import com.jfoenix.controls.JFXButton;
 import dto.MedicineDTO;

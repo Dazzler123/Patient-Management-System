@@ -1,6 +1,6 @@
 package controller;
 
-import bo.AddPatientBO;
+import bo.custom.AddPatientBO;
 import bo.custom.impl.AddPatientBOImpl;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
