@@ -44,19 +44,12 @@ public class PurchaseMedicineBOImpl implements PurchaseMedicineBO {
 
     @Override
     public int getQty(String id) throws SQLException, ClassNotFoundException {
-        ResultSet resultSet = CrudUtil.execute("SELECT qty_on_hand FROM medicine WHERE M_ID=?", id);
-        if(resultSet.next()){
-            return resultSet.getInt("qty_on_hand");
-        }
-        return 0;
+       return medicineDAO.getQty(id);
     }
 
     @Override
     public boolean updateQty(int reducedQty, String id) throws SQLException, ClassNotFoundException {
-        if(CrudUtil.execute("UPDATE Medicine SET qty_on_hand=? WHERE M_ID=?", reducedQty, id)){
-            return true;
-        }
-        return false;
+      return medicineDAO.updateQty(reducedQty,id);
     }
 
 
