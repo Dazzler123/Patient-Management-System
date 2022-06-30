@@ -1,8 +1,11 @@
 package bo.custom.impl;
 
 import bo.custom.PurchaseMedicineBO;
+import dao.custom.MedicineDAO;
+import dao.custom.impl.MedicineDAOImpl;
 import dto.MedicineDTO;
 import dto.Medicine_Cart;
+import entity.Medicine;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import util.CrudUtil;
@@ -15,24 +18,15 @@ import java.time.LocalTime;
 
 public class PurchaseMedicineBOImpl implements PurchaseMedicineBO {
 
+    //Dependency Injection - property injection
+    private final MedicineDAO medicineDAO = new MedicineDAOImpl();
+
     @Override
     public ObservableList<MedicineDTO> getAllMedicines() throws SQLException, ClassNotFoundException {
         ObservableList<MedicineDTO> medicineList = FXCollections.observableArrayList();
-        ResultSet resultSet = CrudUtil.execute("SELECT * FROM Medicine");
-        while (resultSet.next()) {
-            medicineList.add(
-                    new MedicineDTO(
-                            resultSet.getString("M_ID"),
-                            resultSet.getString("name"),
-                            resultSet.getString("brand"),
-                            resultSet.getString("country"),
-                            resultSet.getString("volume"),
-                            LocalDate.parse(resultSet.getString("date_of_manufacture")),
-                            LocalDate.parse(resultSet.getString("date_of_expiry")),
-                            new BigDecimal(resultSet.getString("p_p_unit")),
-                            resultSet.getInt("qty_on_hand")
-                    )
-            );
+        for(Medicine m : medicineDAO.getAll()){
+            medicineList.add(new MedicineDTO(m.getM_ID(),m.getName(),m.getBrand(),m.getCountry(),m.getVolume(),
+                    m.getDate_of_manufacture(),m.getDate_of_expiry(),new BigDecimal(m.getP_p_unit()),m.getQty_on_hand()));
         }
         return medicineList;
     }
