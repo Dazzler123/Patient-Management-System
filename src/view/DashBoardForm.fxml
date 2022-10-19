@@ -37,7 +37,7 @@
                   <Image url="@assets/download-removebg-preview.png" />
                </image>
             </ImageView>
-            <Label layoutX="78.0" layoutY="548.0" text="Niwansuwa Medical Center">
+            <Label layoutX="78.0" layoutY="548.0" text="Sahana Medical Center">
                <font>
                   <Font name="System Bold Italic" size="19.0" />
                </font>
