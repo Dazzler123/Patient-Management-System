@@ -19,7 +19,7 @@ public class AdminLoginFormControlller {
         String password = txtPassword.getText();
 
         if (username.equals("admin") & password.equals("1234")) {
-            UINavigation.setUI("AdminForm", "Administrator Controls");
+            UINavigation.setUI("AdministratorForm", "Administrator Controls");
 
             //close login ui
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
