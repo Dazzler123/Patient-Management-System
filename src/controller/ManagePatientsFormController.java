@@ -7,7 +7,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-
 public class ManagePatientsFormController {
     public JFXTextField txtNIC;
     public JFXTextField txtName;

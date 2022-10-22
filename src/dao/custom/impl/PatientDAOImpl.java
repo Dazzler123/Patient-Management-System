@@ -18,4 +18,14 @@ public class PatientDAOImpl implements PatientDAO {
         }
         return false;
     }
+
+    @Override
+    public boolean update(Patient patient) throws SQLException, ClassNotFoundException {
+        if(CrudUtil.execute("UPDATE PATIENT SET name=?, mobile=?,address=?, age=?, gender=?, weight=?, history=?, other_issues=? WHERE nic=?",
+                patient.getName(),patient.getMobile(),patient.getAddress(),patient.getAge(),
+                patient.getGender(),patient.)) {
+
+        }
+        return false;
+    }
 }
