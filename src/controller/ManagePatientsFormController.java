@@ -41,8 +41,13 @@ public class ManagePatientsFormController {
         stage.close();
     }
 
-    public void btnDeletePatient(ActionEvent actionEvent) {
-
+    public void btnDeletePatient(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        if(managePatientBO.deletePatient(txtNIC.getText())){
+            //confirmation alert
+            new Alert(Alert.AlertType.CONFIRMATION,"Patient deleted.").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
+        }
     }
 
     public void btnUpdatePatient(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

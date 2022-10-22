@@ -9,4 +9,5 @@ public interface PatientDAO {
     public boolean save(Patient patient) throws SQLException, ClassNotFoundException;
     public boolean update(Patient patient) throws SQLException, ClassNotFoundException;
     public Patient search(String id) throws SQLException, ClassNotFoundException;
+    public boolean delete(String id) throws SQLException, ClassNotFoundException;
 }

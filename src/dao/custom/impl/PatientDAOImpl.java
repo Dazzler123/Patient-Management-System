@@ -49,4 +49,12 @@ public class PatientDAOImpl implements PatientDAO {
         }
         return null;
     }
+
+    @Override
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+        if(CrudUtil.execute("DELETE FROM Patient WHERE nic=?",id)) {
+            return true;
+        }
+        return false;
+    }
 }

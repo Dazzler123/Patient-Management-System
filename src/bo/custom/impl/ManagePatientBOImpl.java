@@ -36,7 +36,10 @@ public class ManagePatientBOImpl implements ManagePatientBO {
     }
 
     @Override
-    public boolean deletePatient() {
+    public boolean deletePatient(String id) throws SQLException, ClassNotFoundException {
+        if(patientDAO.delete(id)) {
+            return true;
+        }
         return false;
     }
 }
